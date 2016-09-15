@@ -1,0 +1,17 @@
+# client stuff
+node_modules
+npm-debug.log
+
+# 12factor app files
+.env
+
+# elm stuff
+client/build/*
+client/elm-stuff
+
+# haskell stuff
+dist
+.stack-work
+
+# os stuff
+.DS_Store

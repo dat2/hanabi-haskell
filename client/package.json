@@ -1,0 +1,28 @@
+{
+  "name": "elm-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch:elm": "nodemon src/Main.elm",
+    "watch:static": "gulp",
+    "watch": "concurrently --raw \"npm run watch:elm\" \"npm run watch:static\"",
+    "serve": "cd build; static-server --port 3000  --index ./index.html",
+    "start": "concurrently --raw \"npm run watch\" \"npm run serve\""
+  },
+  "author": "Nicholas Dujay <nickdujay@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^2.2.0",
+    "del": "^2.2.2",
+    "dotenv-safe": "^2.3.1",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-template": "^4.0.0",
+    "static-server": "^2.0.3"
+  }
+}
