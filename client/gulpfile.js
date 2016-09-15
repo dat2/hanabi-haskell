@@ -36,7 +36,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('elm', shell.task([
-  'yes Y | elm make --output=build/main.js src/Main.elm'
+  'yes Y | ./node_modules/.bin/elm make --output=build/main.js src/Main.elm'
 ]));
 
 gulp.task('watch', () => {
